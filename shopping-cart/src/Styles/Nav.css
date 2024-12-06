@@ -1,0 +1,49 @@
+:root {
+    --myFont1: "Sour Gummy", sans-serif;
+}
+
+.navContainer * {
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navContainer {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: #000;
+
+    width: 100vw;
+    padding: 15px;
+}
+
+.title {
+    font-family: var(--myFont1);
+}
+
+.linksContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+}
+
+.link {
+    text-decoration: none;
+    padding: 15px;
+    font-size: 1.1em;
+    color: #000;
+    transition: font-size 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+.link:hover {
+    color: #345fec;
+    cursor: pointer;
+    font-size: 1.3em;
+}
