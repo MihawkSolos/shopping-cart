@@ -4,7 +4,8 @@ const Home = () => {
 
     return (
         <>
-             <h1>Home</h1> 
+            <h3>Welcome to Aether! </h3>
+            <p>Enjoy your shopping experience!</p>
         </>
     );
 };

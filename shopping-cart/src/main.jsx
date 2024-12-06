@@ -4,14 +4,12 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import routes from './Components/Routes.jsx';
 import './index.css'
-import Nav from './Components/Nav.jsx'
 
 const router = createBrowserRouter(routes);
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <RouterProvider router={router}>
-      
     </RouterProvider>
   </StrictMode>,
 )

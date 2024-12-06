@@ -1,3 +1,4 @@
+import { Link, Outlet } from 'react-router-dom';
 import '../Styles/ErrorPage.css'
 
 const ErrorPage = () => {
@@ -8,6 +9,7 @@ const ErrorPage = () => {
             <Link to='/'>
                 Click here to go back to home page.
             </Link>
+            <Outlet />
         </>
     )
 }

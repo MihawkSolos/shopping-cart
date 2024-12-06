@@ -1,7 +1,11 @@
 import {Link,Outlet} from 'react-router-dom'
+import { useState } from 'react'
 import '../Styles/Nav.css'
+import cartImg from '../images/cart.svg'
 
 const Nav = () => {
+
+    const [cartCounter, setCountCounter] = useState(0);
 
     return (
         <>
@@ -10,7 +14,12 @@ const Nav = () => {
                 <div className='linksContainer'>
                     <Link to="/" className='link'>Home</Link>
                     <Link to="/shop" className='link'>Shop</Link>
-                    <Link to="/cart" className='link'>Cart</Link>
+                    <div className="cartContainer">
+                       <Link to="/cart" className='link'>Cart</Link> 
+                       <img className='cartImg' src={cartImg} alt="Cart" />
+                       <div className='cartCounter'>{cartCounter}</div>
+                    </div>
+                    
                 </div>
             </div>
             <div className="content">
