@@ -22,7 +22,7 @@ const Cart = () => {
     <div className="cartProductContainer">
       <h2>Shopping Cart</h2>
       {Object.keys(cartState).length > 0 ? (
-        <div className='cartProduct'>
+        <div className='checkoutProducts'>
           {Object.values(cartState).map(({ productInfo, numOfProduct }) => (
             <div className="cartItem" key={productInfo.id}>
               <img className="checkoutImg" src={productInfo.image} alt={productInfo.title} />
@@ -42,8 +42,7 @@ const Cart = () => {
             type="button"
             onClick={handleCheckout}
             >
-                Proceed to Checkout
-                
+                Proceed to Checkout  
           </button>
           </Link>
         </div>
