@@ -4,9 +4,9 @@ import { useEffect, useState } from 'react';
 
 const Shop = () => {
   const { addToCart } = useOutletContext();
+  const {cartState, setCartState} = useOutletContext();
   const [products, setProducts] = useState(null);
-  const [cartState, setCartState] = useState({}); // Tracks clicked status and quantity for each product
-
+  
 
   useEffect(() => {
     const fetchProducts = async () => {

@@ -28,6 +28,21 @@
     padding: 15px;
     border-radius: 30px;
 }
+@media (max-width: 920px) {
+    .productsContainer {
+        margin-top: 150px;
+    }
+
+    .product {
+        height: 400px;
+        width: 350px;
+    }
+    
+    .product .productImg {
+        height: 100px;
+        width: 100px;
+    }
+}
 
 .productImg {
     height: 150px;

@@ -1,0 +1,27 @@
+:root {
+    --myFont1: "Sour Gummy", sans-serif;
+}
+
+.cartProductContainer {
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--myFont1);
+}
+
+.cartItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+.checkoutImg {
+    height: 100px;
+    width: 100px;
+    padding: 8px;
+}

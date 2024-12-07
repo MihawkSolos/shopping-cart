@@ -6,6 +6,8 @@ import cartImg from '../images/cart.svg'
 const Nav = () => {
 
     const [cartCounter, setCartCounter] = useState(0);
+    const [cartState, setCartState] = useState({}); // Tracks clicked status and quantity for each product
+
 
     const addToCart = () => {
         setCartCounter((prev) => prev + 1);
@@ -26,7 +28,7 @@ const Nav = () => {
                 </div>
             </div>
             <div className="content">
-                <Outlet context={{addToCart}}/>
+                <Outlet context={{addToCart, setCartCounter, cartState, setCartState}}/>
             </div>
         </>
     )
