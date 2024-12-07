@@ -5,7 +5,11 @@ import cartImg from '../images/cart.svg'
 
 const Nav = () => {
 
-    const [cartCounter, setCountCounter] = useState(0);
+    const [cartCounter, setCartCounter] = useState(0);
+
+    const addToCart = () => {
+        setCartCounter((prev) => prev + 1);
+    }
 
     return (
         <>
@@ -19,11 +23,10 @@ const Nav = () => {
                        <img className='cartImg' src={cartImg} alt="Cart" />
                        <div className='cartCounter'>{cartCounter}</div>
                     </div>
-                    
                 </div>
             </div>
             <div className="content">
-                <Outlet />
+                <Outlet context={{addToCart}}/>
             </div>
         </>
     )

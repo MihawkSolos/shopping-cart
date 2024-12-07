@@ -1,9 +1,12 @@
+import { useOutletContext } from 'react-router-dom';
 import '../Styles/Shop.css'
 import { useEffect, useState } from 'react'
+
 
  const Shop = () => {
 
     const [products, setProducts] = useState(null);
+    const {addToCart} = useOutletContext();
 
     useEffect(() => {
         const fetchProducts = async () => {
@@ -11,7 +14,6 @@ import { useEffect, useState } from 'react'
                 const response = await fetch('https://fakestoreapi.com/products');
                 const data = await response.json();
                 setProducts(data);
-                console.log(products);
             } catch (error) {
                 console.error('Error fetching products: ', error);
             }
@@ -31,11 +33,15 @@ import { useEffect, useState } from 'react'
                         <h5>{product.title}</h5>
                         <img className='productImg' src={product.image} alt={product.title} />
                         <h4>${product.price}</h4>
-                        <button className='addButton' type="button">Add to Cart</button>
+                        <button  
+                        onClick={addToCart}
+                        className='addButton'
+                         type="button"
+                         >Add to Cart</button>
                     </div>
                     ))
                 ) : (
-                    <h3> Sorry no inventory </h3>
+                    <h3> Loading... </h3>
                 )}
             </div>
         </>
